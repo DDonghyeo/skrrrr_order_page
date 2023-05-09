@@ -19,12 +19,12 @@
                         <div class="able box">{{menu.able}}</div>
                         <div class="price box">{{menu.price}}</div>
                         <div class="pack">
-                            <div id="{{menu.id}}_amount" class="amount box">
-                                <button class="down"></button> 
-                                1
-                                <button class="up" style="float: right;"></button>
+                            <div class="amount box">
+                                <button id="{{menu.id}}" class="down" onclick="down(this)"></button> 
+                                <p id="{{menu.id}}_amount">1</p>
+                                <button id= "{{menu.id}}"class="up" style="float: right;" onclick="up(this)"></button>
                             </div>
-                            <button class="add_button">담기</button>
+                            <button id="{{menu.id}}" class="add_button" onclick="add(this)">담기</button>
                         </div>    
                     </div>
                 </div>

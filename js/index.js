@@ -27,15 +27,24 @@ function add(e){
     var parent = document.getElementById(id_).getElementsByClassName('option')[0];
     var name = parent.getElementsByClassName('name')[0].innerText;
     var target = id + "_amount";
-    var origin = parseInt(document.getElementById(target).innerText);
-    alert(name+ " " + origin + "개를 장바구니에 담았습니다.")
+    var amount = parseInt(document.getElementById(target).innerText);
+    alert(name+ " " + amount + "개를 장바구니에 담았습니다.");
 
     document.getElementById(target).innerText = 1;
 
-    var total = parseInt(document.getElementById('order_count').innerText)
-    total_ = total + origin
-    console.log(total)
-    document.getElementById('order_count').innerText = total_
+    var total = parseInt(document.getElementById('order_count').innerText);
+    total_ = total + amount;
+    console.log(total);
+    document.getElementById('order_count').innerText = total_;
+
+    var i = 0;
+
+    for( i = 0; i <order.length; i++ ){
+        if(order[i][0] == name){
+            return
+        }
+    }
+
 }
 
 function order(){
