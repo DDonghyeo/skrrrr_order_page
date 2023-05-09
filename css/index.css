@@ -16,7 +16,7 @@ html,body {
 }
 
 .background{
-    width: 90%;
+    width: 98%;
     height: 200%;
     margin: 0px auto;
     background-image: url(/img/main.png);
@@ -37,10 +37,11 @@ html,body {
     overflow-y: scroll;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .menu{
-    margin-bottom: 20px;
+    margin-bottom: 80px;
 }
 
 .option{
@@ -116,7 +117,7 @@ html,body {
 .add_button{
     font-weight: 700;
     width: 110px;
-    height: 30px;
+    height: 40px;
     margin-left: 20px;
     background-color: #BFBFBF;
     box-shadow: 2px 2px 0 #FFFFFF inset;
@@ -129,7 +130,7 @@ html,body {
 .order{
     display: flex;
     width: 90%;
-    height: 2%;
+    height: 2.5%;
     background-color: #FFFFFF;
     margin: 20px auto;
     font-family: 'Press Start 2P';
@@ -156,4 +157,5 @@ html,body {
 .order p{
     width: 30%;
     margin: 0;
+    line-height: 220%;
 }
