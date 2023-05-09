@@ -31,7 +31,7 @@
             {% endfor %}    
 
             <!-- sample -->
-            <div id="1" class="menu">
+            <div id="menu_1" class="menu">
                 <div class="picture"> <img src="/img/example.png" alt=""></div>
                 <div class="option">
                     <div class="name box">어묵탕</div>
@@ -43,7 +43,7 @@
                             <p id="1_amount">1</p>
                             <button id="1" class="up" style="float: right;" onclick="up(this)"></button>
                         </div>
-                        <button class="add_button">담기</button>
+                        <button id="1" class="add_button" onclick="add(this)">담기</button>
                     </div>    
                 </div>
             </div>
@@ -102,8 +102,8 @@
             </div>
         </div>
         <div class="order">
-            5
-            <button class="order_button">장바구니</button>
+            <p id="order_count">0</p>
+            <button class="order_button" onclick="order()">장바구니</button>
         </div>
     </div>
 </body>

@@ -127,6 +127,7 @@ html,body {
 }
 
 .order{
+    display: flex;
     width: 90%;
     height: 2%;
     background-color: #FFFFFF;
@@ -150,4 +151,9 @@ html,body {
     border-left: 2px solid #E5E5E5;
     border-right:2px solid #5E5E5E;
     border-bottom:2px solid #5E5E5E;
+}
+
+.order p{
+    width: 30%;
+    margin: 0;
 }
