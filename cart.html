@@ -4,11 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/cart.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <title>skrrrr.exe</title>
 </head>
 <body>
-    
+    <div class="background">
+        <div class="menu_wrap">
+            
+        </div>
+        <div class="order">
+            <p id="order_count">0</p>
+            <button class="order_button" onclick="make_order()">장바구니</button>
+        </div>
+    </div>
+
+    <!-- amount validation modal -->
+    <div id="order_alert" class="modal">
+        <div class="modal_contents">
+            <button target="order_alert" class="modal_close" onclick="modal_close(this)"></button>
+            <div class="modal_text">
+                1개 이상 주문해 주세요.
+            </div>
+            <button target="order_alert" class="modal_ok" onclick="modal_close(this)"></button>
+        </div>
+    </div>
+
+     <!-- added product modal -->
+     <div id="add_alert" class="modal">
+        <div class="modal_contents">
+            <button target="add_alert" class="modal_close" onclick="modal_close(this)"></button>
+            <div class="modal_text">
+                ####
+            </div>
+            <button target="add_alert" class="modal_ok" onclick="modal_close(this)"></button>
+        </div>
+    </div>
+
+    <!-- cart alret modal -->
+    <div id="cart_alert" class="modal">
+        <div class="modal_contents">
+            <button target="cart_alert" class="modal_close" onclick="modal_close(this)"></button>
+            <div class="modal_text" style="display:flex;justify-content: center;align-items: center;">
+                <img src="/img/error.jpg" alt="" style="width:40px; height: 40px;"> 장바구니에 담은 내역이 없습니다.
+            </div>
+            <button target="cart_alert" class="modal_ok" onclick="modal_close(this)"></button>
+        </div>
+    </div>
+
 </body>
-<script type="text/javascript" src="/js/index.js"></script>
+<script type="text/javascript" src="/js/cart.js"></script>
 </html>

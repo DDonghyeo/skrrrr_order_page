@@ -26,6 +26,7 @@ function add(e){
     var id_ = "menu_" + id;
     var parent = document.getElementById(id_).getElementsByClassName('option')[0];
     var name = parent.getElementsByClassName('name')[0].innerText;
+    var price = parent.getElementsByClassName('price')[0].innerText;
     var target = id + "_amount";
     var amount = parseInt(document.getElementById(target).innerText);
     
@@ -39,11 +40,13 @@ function add(e){
     total_ = total + amount;
     document.getElementById('order_count').innerText = total_;
 
-    add_order(name,amount);
+    add_order(name,amount,price);
+
+    console.log(order);
 
 }
 
-function add_order(name, amount){
+function add_order(name, amount, price){
     for (i = 0; i<order.length-1; i++){
         if(order[i].name == name){
             order[i].amount += amount;
@@ -54,6 +57,7 @@ function add_order(name, amount){
     var data = new Object();
     data.name = name;
     data.amount = amount;
+    data.price = price;
     
     order.push(data);
 }
