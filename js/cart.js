@@ -17,6 +17,7 @@ calculate();
 
 function order_request(){
     document.getElementById('order_alert').style.display = "block";
+    copy();
 }
 
 function back(){
@@ -24,8 +25,13 @@ function back(){
 }
 
 function order_yes(){
-
+    var newWindow = window.open("http://kko.to/hD0-Cb93jJ", "_blank");
+       setTimeout(function(){
+        newWindow.close();
+   }, 5000);
+    window.open("/order_complete.html")
 }
+
 
 function modal_close(e){
     var id = e.getAttribute('target');
@@ -77,3 +83,21 @@ function down(e){
     document.getElementById(target).innerText = origin - 1;
     calculate();
 }
+
+
+
+
+
+
+
+//copy
+function copy() {
+    var obj = document.getElementById("total_price");
+    var range = document.createRange();
+    range.selectNode(obj.childNodes[0]);  //텍스트 정보를 Range 객체에 저장
+    var sel = window.getSelection();
+    sel.removeAllRanges();  //기존 선택정보 삭제
+    sel.addRange(range);  //텍스트 정보 선택
+    document.execCommand("copy");  //복사
+    sel.removeRange(range);  //선택 정보 삭제
+  }

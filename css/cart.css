@@ -15,7 +15,7 @@
 
 .order_yes{
     position: relative;
-    top: 44px;
+    top: 8px;
     width: 100px;
     height: 30px;
     background: transparent;
@@ -24,7 +24,7 @@
 
 .order_no{
     position: relative;
-    top: 44px;
+    top: 8px;
     width: 100px;
     height: 30px;
     background: transparent;
