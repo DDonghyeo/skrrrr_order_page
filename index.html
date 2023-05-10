@@ -96,7 +96,7 @@
         </div>
     </div>
 
-    <!-- amount validation rmodal -->
+    <!-- amount validation modal -->
     <div id="order_alert" class="modal">
         <div class="modal_contents">
             <button target="order_alert" class="modal_close" onclick="modal_close(this)"></button>
@@ -107,7 +107,27 @@
         </div>
     </div>
 
-    
+     <!-- added product modal -->
+     <div id="add_alert" class="modal">
+        <div class="modal_contents">
+            <button target="add_alert" class="modal_close" onclick="modal_close(this)"></button>
+            <div class="modal_text">
+                ####
+            </div>
+            <button target="add_alert" class="modal_ok" onclick="modal_close(this)"></button>
+        </div>
+    </div>
+
+    <!-- cart alret modal -->
+    <div id="cart_alert" class="modal">
+        <div class="modal_contents">
+            <button target="cart_alert" class="modal_close" onclick="modal_close(this)"></button>
+            <div class="modal_text" style="display:flex;justify-content: center;align-items: center;">
+                <img src="/img/error.jpg" alt="" style="width:40px; height: 40px;"> 장바구니에 담은 내역이 없습니다.
+            </div>
+            <button target="cart_alert" class="modal_ok" onclick="modal_close(this)"></button>
+        </div>
+    </div>
 
 </body>
 <script type="text/javascript" src="/js/index.js"></script>

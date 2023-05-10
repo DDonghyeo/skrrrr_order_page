@@ -28,7 +28,10 @@ function add(e){
     var name = parent.getElementsByClassName('name')[0].innerText;
     var target = id + "_amount";
     var amount = parseInt(document.getElementById(target).innerText);
-    alert(name+ " " + amount + "개를 장바구니에 담았습니다.");
+    
+    document.getElementById("add_alert").getElementsByClassName("modal_contents")[0].getElementsByClassName("modal_text")[0].innerHTML
+    = name + " "+amount+"개를 장바구니에 담았습니다.";
+    document.getElementById("add_alert").style.display = "block";
 
     document.getElementById(target).innerText = 1;
 
@@ -56,9 +59,10 @@ function add_order(name, amount){
 }
 
 function make_order(){
+    console.log(order)
 
-    if (order == null){
-        alert('장바구니에 담은 내역이 없습니다.');
+    if (order[0] == null){
+        document.getElementById("cart_alert").style.display = "block";
         return
     }
 
@@ -75,9 +79,9 @@ function modal_close(e){
     target.style.display = "none";
 }
 
-function open(e){
-    var id = e.getAttribute('target');
-    var target = document.getElementById(id)
-    target.style.display = "block";
-}
+// function open(e){
+//     var id = e.getAttribute('target');
+//     var target = document.getElementById(id)
+//     target.style.display = "block";
+// }
 
