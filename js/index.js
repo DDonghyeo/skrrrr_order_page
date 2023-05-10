@@ -14,7 +14,7 @@ function down(e){
     var target = id + "_amount";
     var origin = parseInt(document.getElementById(target).innerText);
     if (origin-1 == 0){
-        alert("1개 이상 주문해 주세요.")
+        document.getElementById('order_alert').style.display = "block";
         return
     }
     document.getElementById(target).innerText = origin - 1;
@@ -34,19 +34,50 @@ function add(e){
 
     var total = parseInt(document.getElementById('order_count').innerText);
     total_ = total + amount;
-    console.log(total);
     document.getElementById('order_count').innerText = total_;
 
-    var i = 0;
+    add_order(name,amount);
 
-    for( i = 0; i <order.length; i++ ){
-        if(order[i][0] == name){
+}
+
+function add_order(name, amount){
+    for (i = 0; i<order.length-1; i++){
+        if(order[i].name == name){
+            order[i].amount += amount;
             return
         }
     }
 
+    var data = new Object();
+    data.name = name;
+    data.amount = amount;
+    
+    order.push(data);
 }
 
-function order(){
+function make_order(){
+
+    if (order == null){
+        alert('장바구니에 담은 내역이 없습니다.');
+        return
+    }
+
     var data = JSON.stringify(order);
+
+
+    localStorage.setItem("order",data);
+    window.open("/cart.html");
 }
+
+function modal_close(e){
+    var id = e.getAttribute('target');
+    var target = document.getElementById(id)
+    target.style.display = "none";
+}
+
+function open(e){
+    var id = e.getAttribute('target');
+    var target = document.getElementById(id)
+    target.style.display = "block";
+}
+
