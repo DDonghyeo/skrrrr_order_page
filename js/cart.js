@@ -21,7 +21,7 @@ function order_request(){
 }
 
 function back(){
-    window.open("/index.html");
+    location.replace("/index.html");
 }
 
 function order_yes(){
@@ -29,7 +29,7 @@ function order_yes(){
        setTimeout(function(){
         newWindow.close();
    }, 5000);
-    window.open("/order_complete.html")
+    location.replace("/order_complete.html")
 }
 
 

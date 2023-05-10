@@ -74,7 +74,7 @@ function make_order(){
 
 
     localStorage.setItem("order",data);
-    window.open("/cart.html");
+    location.replace("/cart.html");
 }
 
 function modal_close(e){
