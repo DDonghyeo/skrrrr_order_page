@@ -14,8 +14,9 @@
             
         </div>
         <div class="order">
-            <p id="order_count">0</p>
-            <button class="order_button" onclick="make_order()">장바구니</button>
+            <p id="total_price" style="padding-left: 10px; padding-right: 10px;">0</p>
+            <button class="order_button" onclick="order_request()">주문하기</button>
+            <button class="back_button" onclick="back()">돌아가기</button>
         </div>
     </div>
 
@@ -24,31 +25,10 @@
         <div class="modal_contents">
             <button target="order_alert" class="modal_close" onclick="modal_close(this)"></button>
             <div class="modal_text">
-                1개 이상 주문해 주세요.
+                주문 하시겠습니까?
             </div>
-            <button target="order_alert" class="modal_ok" onclick="modal_close(this)"></button>
-        </div>
-    </div>
-
-     <!-- added product modal -->
-     <div id="add_alert" class="modal">
-        <div class="modal_contents">
-            <button target="add_alert" class="modal_close" onclick="modal_close(this)"></button>
-            <div class="modal_text">
-                ####
-            </div>
-            <button target="add_alert" class="modal_ok" onclick="modal_close(this)"></button>
-        </div>
-    </div>
-
-    <!-- cart alret modal -->
-    <div id="cart_alert" class="modal">
-        <div class="modal_contents">
-            <button target="cart_alert" class="modal_close" onclick="modal_close(this)"></button>
-            <div class="modal_text" style="display:flex;justify-content: center;align-items: center;">
-                <img src="/img/error.jpg" alt="" style="width:40px; height: 40px;"> 장바구니에 담은 내역이 없습니다.
-            </div>
-            <button target="cart_alert" class="modal_ok" onclick="modal_close(this)"></button>
+            <button class="order_yes" onclick="order_yes()"></button>
+            <button class="order_no" onclick="order_no()"></button>
         </div>
     </div>
 
