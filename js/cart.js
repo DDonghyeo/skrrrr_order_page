@@ -2,14 +2,6 @@ var orders = localStorage.getItem('order');
 var order = JSON.parse(orders);
 
 function menu_load(){
-    console.log(order)
-    console.log(order[0].name)
-    console.log(order[0].amount)
-    console.log(order[1].name)
-    console.log(order[1].amount)
-    console.log(order[2].name)
-    console.log(order[2].amount)
-
     var target = document.getElementsByClassName("menu_wrap")[0]
     for (i=0; i<orders.length; i++){
         let j = i+1
