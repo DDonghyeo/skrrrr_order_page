@@ -41,6 +41,8 @@ function order_yes(){
        setTimeout(function(){
         newWindow.close();
    }, 5000);
+   //local storage 초기화
+   localStorage.clear();
    //주문 완료 페이지 이동
     location.replace("/order_complete.html")
 }
