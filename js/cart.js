@@ -17,6 +17,10 @@ calculate();
 
 //주문하기
 function order_request(){
+    if(document.getElementById('table_number').innerText == ""){
+        alert("테이블 번호를 적어주세요.")
+        return
+    }
     document.getElementById('order_alert').style.display = "block";
     copy();
 }
