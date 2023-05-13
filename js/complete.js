@@ -5,7 +5,6 @@ function pay_yes(){
     data.table_num = localStorage.getItem('table_number');
     data.menus = localStorage.getItem('order');
     order_final.push(data)
-    console.log(JSON.stringify(order_final))
 
     //정보 전송
     const request = new XMLHttpRequest();
