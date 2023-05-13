@@ -17,7 +17,7 @@ calculate();
 
 //주문하기
 function order_request(){
-    if(document.getElementById('table_number').innerText == ""){
+    if(document.getElementById('table_number').value == ""){
         alert("테이블 번호를 적어주세요.")
         return
     }
@@ -45,9 +45,10 @@ function order_yes(){
        setTimeout(function(){
         newWindow.close();
    }, 5000);
-   //local storage 초기화
-   localStorage.clear();
    //주문 완료 페이지 이동
+   localStorage.setItem('order',JSON.stringify(order))
+   console.log("talbe number"+document.getElementById('table_number').value);
+    localStorage.setItem('table_number',document.getElementById('table_number').value);
     location.replace("/order_complete.html")
 }
 
